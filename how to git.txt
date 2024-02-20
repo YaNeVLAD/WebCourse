@@ -1,0 +1,5 @@
+git clone https://github.com/YaNeVLAD/WebCourse.git
+git status
+git add files
+git commit -m "message"
+git push

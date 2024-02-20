@@ -1,153 +1,157 @@
-.Escape
-{
-  height: 26px;
-  width: 92px;
-  margin-left: 250px;
-  margin-top: 20px;
-  color: rgba(46, 46, 46, 1);
-  font-family: Lora;
-  font-size: 26px;
-  font-weight: 400;
-  line-height: 26px;
-  letter-spacing: 0em;
-  text-align: left;
+body {
+  overflow-x: hidden;
+  margin: 0px;
+}
+p {
+  margin: 0px;
+}
+
+#header {
+  height: 40px;
+  padding: 17px 250px;
+}
+#in_header {
+  display: inline-block;
+  height: 40px;
+  width: 100%;
+  height: 100%;
+  padding-block: 10px;
+}
+.logohead {
+  vertical-align: text-top;
   display: inline;  
 }
-.CategoriesLinks
-{
-  color: rgba(46, 46, 46, 1);    
-  font-family: Oxygen;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0.6000000238418579px;
-  text-align: left;    
+
+.in_links{
   display: inline;
+  vertical-align: middle;
+  float: right;
 }
-.HOME
-{
+.link{
+  display: inline-block;
+  color: rgb(46, 46, 46);    
+  font-family: "Oxygen", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.6px;
+  text-align: left;
+  height: 20px;
+  margin: 10px 20px;
+}
+.home {
   width: 39px;
-  height: 20px;
-  margin-top: 27px;
-  margin-left: 491px; 
 }
-.CATEGORIES
-{
+.categories {
   width: 78px;
-  height: 20px;
-  margin-top: 27x;
-  margin-left: 41px;       
 }
-.ABOUT
-{
-  width: 78px;
-  height: 20px;
-  margin-top: 27x;
-  margin-left: 40px;       
+.about {
+  width: 41px;
 }
-.CONTACT
-{
-  width: 78px;
-  height: 20px;
-  margin-top: 27x;
-  margin-left: 40px;       
+.contact {
+  width: 58px;
 }
-.MainHeader
-{
+
+.title {
+  height: 159px;
+  margin: 89px 0 38px 0;
+  width: 100%;
+}
+.titletext {
+  display: inline-block;
   height: 51px;
-  width: 498px;
-  margin-left: 471px;
-  margin-top: 156px;
-  font-family: Lora;
+  width: 100%;
+  margin: -7px 0px 0px 0px;
+  font-family: "Lora", serif;
+  color: rgb(46, 46, 46);
   font-size: 50px;
   font-weight: 400;
   line-height: 51px;
   letter-spacing: 2px;
   text-align: center;
-  color: rgba(46, 46, 46, 1); 
-  display: block;  
-  }
-.Desc
-{
-  width: 504px;
+}
+.titledesc {
+  display: inline-block;
   height: 20px;
-  margin-top: 20px;
-  margin-left: 468px;
-  font-family: Oxygen;
+  width: 100%;
+  margin: 20px 0px 0px 0px;
+  font-family: "Oxygen", sans-serif;
+  color: rgba(46, 46, 46, 0.63);  ;
   font-size: 17px;
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0em;
-  text-align: center;
-  color: rgba(46, 46, 46, 0.63);   
+  text-align: center;  
 }
-.Image
-{
-  width: 1440px;
+
+.image {
+  width: 100%;
   height: 534px;
-  margin-top: 113px;
+  top: 360px;
   border-radius: 3px;
+  margin: 0px;
 }
-.Text
-{
-  width: 960px;
-  height: 1431px;
-  margin-top: 140px;
-  margin-left: 240px;
-  margin-right: 240px;
-  font-family: Oxygen;
+
+.text {
+  display: inline-block;
+  width: 100%;
+}
+.in_text {
+  font-family: "Oxygen", sans-serif;
+  color: rgb(16, 19, 21);
   font-size: 24px;
   font-weight: 400;
   line-height: 35px;
   letter-spacing: 0em;
-  text-align: left;
-  color: rgba(16, 19, 21, 1);  
+  text-align: left;  
+  display: inline-block;
+  padding: 140px 240px 135px 240px;
 }
-footer
-{
-  background-image: url(footer.png); 
-  width: 1440px;
-  height: 89px; 
-  
+
+#footer {
+  height: 34px;
+  padding: 28px 240px 27px 240px;
+  background-image: url(images/Footer.png);
 }
-footer .CategoriesLinks
-{
-  color:rgba(255, 255, 255, 0.6);
+#in_footer {
+  display: inline-block;
+  height: 34px;
+  width: 100%;
+  height: 100%;
 }
-footer .Escape
-{
-  color: rgba(255, 255, 255, 0.6);
+.logofoot {
+  vertical-align: text-top;
+  display: inline;
+  padding: 3px 0px 5px 10px;  
+}
+
+#footer .in_links {
+  display: inline;
+  vertical-align: middle;
+  float: right;
+}
+#footer .link {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.6);  
+  font-family: "Oxygen", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 1px;
+  text-align: right;  
   height: 26px;
-  width: 92px;
-  margin-left: 250px;
-  margin-top: 31px;
-  margin-bottom: 32px;
+  margin: 3px 20px;
 }
-footer .HOME
-{
-  width: 39px;
-  height: 20px;
-  margin-top: 27px;
-  margin-left: 576px; 
+#footer .home {
+  width: 37px;
 }
-footer .CATEGORIES
-{
-  width: 78px;
-  height: 20px;
-  margin-top: 27x;
-  margin-left: 20px;       
+#footer .categories {
+  width: 76px;
 }
-footer .ABOUT
-{
-  width: 78px;
-  height: 20px;
-  margin-top: 27x;
-  margin-left: 20px;       
+#footer .about {
+  width: 42px;
 }
-footer .CONTACT
-{
-  width: 78px;
-  height: 20px;
-  margin-top: 27px;
-  margin-left: 20px;       
+#footer .contact {
+  width: 57px;
+  margin-right: 10px;
 }
