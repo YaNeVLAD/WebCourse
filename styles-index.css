@@ -67,7 +67,6 @@ body {
 }
 .banner__title-undertext {
   min-height: 20px;
-  min-width: 504px;
   font: 400 17px/20px "Oxygen", sans-serif;
   text-align: center;
   color: rgba(255, 255, 255, 0.63);
@@ -139,7 +138,9 @@ body {
   width: 460px;
   border-radius: 3px;
   margin: 7px 10px;
-  align-items: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .feature-post-content {
   display: flex;
@@ -156,6 +157,7 @@ body {
   text-transform: capitalize;
   text-decoration: none;
   padding: 58px 0 0 20px;
+  text-decoration: none;
 }
 .feature-post-content__desc {
   position: relative;
@@ -200,6 +202,17 @@ body {
   text-align: left;
   color: rgba(255, 255, 255, 0.7);
 }
+.feature-post__adventure-button {
+  display: inline-block;
+  padding: 6px 9px 7px 9px;
+  margin: 20px;
+  background-color: rgb(221, 120, 63);
+  border-radius: 2px;
+  font: 400 12px / 13px "Oxygen", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
 .the-road-ahead {
   background-image: url(images/posts-images/the-road-ahead.png);
   background-position: center;
@@ -210,25 +223,7 @@ body {
   background-position: center;
   background-size: cover;  
 }
-.button-adventure {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 26px;
-  width: 87px;
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  background-color: rgb(221, 120, 63);
-  border: 1px solid rgb(221, 120, 63);
-  border-radius: 2px;
-  font-family: "Oxygen", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 13px;
-  letter-spacing: 0em;
-  color: white;
-}
+
 .posts-tiltes-style {
   display: flex;
   margin: 60px 0px 16px 0px;
@@ -293,6 +288,7 @@ body {
   font: 400 16px/21px "Lora", serif;
   color: rgb(16, 19, 21);
   padding: 14px 0 0 13px;
+  text-decoration: none;
 }
 .post__desc {
   position: relative;
@@ -330,7 +326,6 @@ body {
   align-items: center;
   margin: 0;
   padding: 28px 0 27px 0;
-
 }
 .footer-background {
   background-image: url(images/Footer.png);
@@ -340,10 +335,6 @@ body {
 }
 .footer-link {
   color: rgba(255, 255, 255, 0.6);
-  gap: 20px;
-}
-.footer-link:last-child {
-  margin-right: 10px;
 }
 .footer__logo {
   display: inline-block;
@@ -357,4 +348,10 @@ body {
   max-width: 960px;
   margin: 0 auto;
   min-height: 34px;
+}
+.footer-navigation {
+  gap: 20px;
+}
+.footer-navigation:last-child {
+  margin-right: 10px;
 }
