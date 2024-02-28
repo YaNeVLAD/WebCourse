@@ -1,68 +1,54 @@
 * {
-margin: 0px;
-padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 body {
-overflow-x: hidden;
+  overflow-x: hidden;
+  background-color: rgb(247, 247, 247, 1);
 }
-a {
-  text-decoration: none
-}
-.main {
+.banner {
   display: flex;
   width: 100%;
   height: 500px;
   justify-content: center;
-
-}
-.main-background {
+  align-items: flex-start;
   background-position: center;
   background-size: cover;
   background-image: url(images/main_image.png);
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: darken;
 }
-.header {
+.container {
   display: flex;
-  position: relative;
-  width: 100%;
-  height: 74px;
   flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-}
-.header-content {
-  display: flex;
-  padding: 17px 250px;
-  height: 40px;
-  width: calc(100vw - 500px);
-  position: absolute;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  width: 940px;
+  margin: 17px auto;
 }
-.header-content__logo {
-  display: inline;
-  padding: 3px 0px 11px 0px; 
+
+.header__logo {
+  display: inline-block;
+  margin: 3px 0px 11px 0px;
 }
-.header-links {
-  width: 377px;
+.navigation__list {
   display: flex;
-  height: 40px;
   justify-content: space-around;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
+  gap: 40px;
+  list-style-type: none;
 }
-.header-links__link {
-  height: 20px;
+.navigation__list:last-child {
+  margin-right: 20px;
 }
-.header-link-style {
-  font-family: "Oxygen", sans-serif;
+.navigation__link {
+  font: 400 12px/20px "Oxygen", sans-serif;
   color: white;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 20px;
   letter-spacing: 0.60px;
-  text-align: left;
+  text-align: center;
+  text-decoration: none;
 }
+
 .title {
   display: flex;
   position: absolute;
@@ -150,8 +136,6 @@ a {
   align-items: center;
   align-content: center;
   justify-content: center;
-}
-.undermain-link-style {
   font-family: "Lora", serif;
   font-size: 14px;
   font-weight: 400;
@@ -163,26 +147,24 @@ a {
 .posts {
   display: flex;
   width: 100%;
-  background-color: rgb(247, 247, 247, 1);
+  height: fit-content;
   justify-content: center;
   flex-flow: column nowrap;
 }
 .featured-posts {
   position: relative;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   align-content: center;
   justify-content: flex-start;
   align-items: center;
-  height: 414px;
   width: 100%;
 }
-.posts-container {
+.featured-posts-container {
   display: flex;
-  position: absolute;
-  top: 120px;
   flex-flow: row wrap;
   justify-content: center;
+
 }
 .feature-post {
   position: relative;
@@ -264,12 +246,12 @@ a {
   color: rgba(255, 255, 255, 0.7);
 }
 .the-road-ahead {
-  background-image: url(images/the-road-ahead.png);
+  background-image: url(images/posts-images/the-road-ahead.png);
   background-position: center;
   background-size: cover;
 }
 .from-top-down {
-  background-image: url(images/from-top-down.png);
+  background-image: url(images/posts-images/from-top-down.png);
   background-position: center;
   background-size: cover;  
 }
@@ -294,8 +276,7 @@ a {
 }
 .posts-tiltes-style {
   display: flex;
-  position: absolute;
-  top: 60px;
+  margin: 60px 0px 16px 0px;
   height: 44px;
   width: 188px;
   border-bottom: 1px solid rgb(222, 222, 222);
@@ -313,15 +294,22 @@ a {
   align-content: center;
   justify-content: flex-start;
   align-items: center;
-  height: 752px;
   width: 100%;
+}
+.posts-container {
+  display: flex;
+  top: 120px;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 0px 240px 89px 240px;
 }
 .post {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   position: relative;
   height: 291px;
   width: 296px;
+  margin: 12px;
   background-color: white;
 }
 .post-content {
@@ -334,7 +322,89 @@ a {
 }
 .post-image {
   position: absolute;
+  top: 0px;
+  align-self: flex-start;
   height: 150px;
   width: 296px;
   border-bottom: 1px solid rgb(229, 229, 229);
+}
+.post-content {
+  height: 93px;
+  border-bottom: 1px solid rgb(229, 229, 229);
+}
+.post__title {
+  position: absolute;
+  left: 13px;
+  top: 14px;
+  font-family: "Lora", serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgb(16, 19, 21);
+}
+.post__desc {
+  position: absolute;
+  left: 13px;
+  top: 41px;
+  font-family: "Oxygen", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgb(122, 122, 122);
+}
+.post-creator {
+  position: absolute;
+  display: flex;
+  margin-left: 13px;
+  margin-right: 13px;
+  width: calc(100% - 26px);
+  height: 48px;
+  align-self: flex-start;
+  flex-flow: row nowrap;
+  align-content: normal;
+  justify-content: space-between;
+  align-items: center;
+}
+.post-creator__image {
+  width: 26px;
+  height: 26px;
+  border-radius: 60px;  
+}
+.post-creator__name {
+  position: absolute;
+  left: 49px;
+}
+.creator-font {
+  font-family: "Oxygen", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgb(153, 153, 153);
+}
+.footer {
+  display: flex;
+  width: 100%;
+  height: 89px;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+}
+.footer-background {
+  background-image: url(images/Footer.png);
+  background-position: center;
+  background-color: rgba(35, 47, 56, 0.6);
+  background-blend-mode: darken;
+}
+.footer-link {
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer__logo {
+  padding: 3px 0px 5px 10px; 
 }
