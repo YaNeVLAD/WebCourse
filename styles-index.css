@@ -7,11 +7,12 @@ body {
   background-color: rgb(247, 247, 247, 1);
 }
 .banner {
-  display: flex;
+  display: flow-root;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
-  height: 500px;
-  justify-content: center;
-  align-items: flex-start;
+  min-height: 500px;
   background-position: center;
   background-size: cover;
   background-image: url(images/main_image.png);
@@ -20,16 +21,16 @@ body {
 }
 .container {
   display: flex;
+  position: relative;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  width: 940px;
+  max-width: 940px;
   margin: 17px auto;
 }
 
 .header__logo {
   display: inline-block;
-  margin: 3px 0px 11px 0px;
 }
 .navigation__list {
   display: flex;
@@ -47,102 +48,69 @@ body {
   letter-spacing: 0.60px;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
-.title {
+.banner__title {
+  max-width: 940px;
+  margin: 0 auto;
+  margin-top: 130px;
   display: flex;
-  position: absolute;
-  height: 159px;
-  flex-flow: column nowrap;
-  align-content: center;
-  justify-content: space-between;
-  align-items: center;
-  width: calc(100vw - 500px);
-  top: 184px;
+  flex-direction: column;
 }
-.title__text {
-  position: relative;
-  height: 51px;
-  margin-top: -7px;
-  min-width: 498px;
-}
-.title-text-style {
-  font-family: "Lora", serif;
+.banner__title-text {
+  margin-bottom: 20px;
+  font: 400 50px/51px "Lora", serif;
   color: white;
-  font-size: 50px;
-  font-weight: 400;
-  line-height: 51px;
   letter-spacing: 2px;
   text-align: center;
 }
-.title__undertext {
-  top: 64px;
-  position: absolute;
-  height: 20px;
+.banner__title-undertext {
+  min-height: 20px;
   min-width: 504px;
-}
-.title-undertext-style {
-  font-family: "Oxygen", sans-serif;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0em;
+  font: 400 17px/20px "Oxygen", sans-serif;
   text-align: center;
   color: rgba(255, 255, 255, 0.63);
+  margin-bottom: 31px;
 }
-.title__button {
-  display: flex;
-  height: 44px;
-  width: 167px;
-  justify-content: center;
-  justify-items: center;
-  border-radius: 3px;
-  border: 1px solid rgb(221, 120, 63);
-  background: rgb(221, 120, 63);
-}
-.title-button-slyle {
-  font-family: "Oxygen", sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0em;
-  align-items: center;
+.banner__title-latest {
+  display: inline-block;
+  text-decoration: none;
+  font: 400 13px/20px "Oxygen", sans-serif;
   text-align: center;
   color: white;
+  padding: 12px 31px;
+  border-radius: 3px;
+  background: rgb(221, 120, 63);
+  margin: 0 auto;
 }
-.undermain {
-  display: flex;
-  position: relative;
-  height: 65px;
-  width: 100%;
-  flex-flow: row wrap;
+.underbanner {
+  min-height: 65px;
   justify-content: center;
-  align-items: center;
   background-color: white;
+  margin: 0;
+  max-width: 100%;
 }
-.undermain-links {
+.underbanner-list {
   display: flex;
-  padding: 10px 240px;
-  height: 46px;
-  width: calc(100vw - 480px);
-  position: absolute;
-  align-items: center;
-  justify-content: space-between;  
+  gap: 21px;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  list-style-type: none;
 }
 .undermain-links__link {
   display: flex;
-  height: 46px;
-  width: 139px;
+  min-height: 46px;
+  min-width: 139px;
+  font: 400 14px/20px "Lora", serif;
+  text-decoration: none;
   align-items: center;
-  align-content: center;
   justify-content: center;
-  font-family: "Lora", serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0em;
   text-align: center;
   color: rgb(118, 128, 136);
+  text-transform: capitalize;
 }
 .posts {
   display: flex;
@@ -164,70 +132,56 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-
 }
 .feature-post {
-  position: relative;
+  display: flex;
   height: 280px;
   width: 460px;
   border-radius: 3px;
   margin: 7px 10px;
+  align-items: flex-end;
 }
 .feature-post-content {
   display: flex;
-  position: absolute;
-  top: 99px;
-  height: 181px;
+  position: relative;
   width: 100%;
   flex-flow: column nowrap;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  min-height: 181px;
 }
 .feature-post-content__title {
-  position: absolute;
-  left: 20px;
-  top: 58px;
-  font-family: "Lora", serif;
-  font-size: 27px;
-  font-weight: 400;
-  line-height: 30px;
-  letter-spacing: 0em;
-  text-align: left;
+  position: relative;
+  font: 400 27px/30px "Lora", serif;
   color: white;
+  text-transform: capitalize;
+  text-decoration: none;
+  padding: 58px 0 0 20px;
 }
 .feature-post-content__desc {
-  position: absolute;
-  left: 20px;
-  top: 94px;
-  font-family: "Oxygen", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 25px;
-  letter-spacing: 0em;
-  text-align: left;
+  position: relative;
+  font: 400 14px / 25px "Oxygen", sans-serif;
   color: rgba(255, 255, 255, 0.7);
+  padding: 6px 0 0 20px;
 }
 .featured-post-creator {
   display: flex;
   flex-flow: row nowrap;
-  align-content: normal;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  top: 131px;
+  position: relative;
+  max-width: 420px;
+  min-height: 35px;
+  padding: 12px 20px 15px 20px;
 }
 .featured-post-creator__image {
+  position: relative;
   width: 26px;
   height: 26px;
   border-radius: 60px;
 }
 .featured-post-creator__name {
   display: flex;
-  height: 35px;
   margin-left: 10px;
-  position: absolute;
-  left: 36px;
   font-family: "Oxygen", sans-serif;
   font-size: 12px;
   font-weight: 400;
@@ -235,6 +189,7 @@ body {
   letter-spacing: 0em;
   text-align: left;
   color: rgba(255, 255, 255, 0.7);
+  flex: auto;
 }
 .featured-post-creator__creation-date {
   font-family: "Oxygen", sans-serif;
@@ -305,7 +260,7 @@ body {
 }
 .post {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   position: relative;
   height: 291px;
   width: 296px;
@@ -314,58 +269,43 @@ body {
 }
 .post-content {
   display: flex;
-  position: absolute;
+  position: relative;
   height: 93px;
-  top: 150px;
   width: 100%;
   flex-flow: column nowrap;
 }
 .post-image {
-  position: absolute;
-  top: 0px;
-  align-self: flex-start;
+  position: relative;
   height: 150px;
   width: 296px;
-  border-bottom: 1px solid rgb(229, 229, 229);
+  border-bottom: 1px solid
 }
 .post-content {
+  display: flex;
+  position: relative;
   height: 93px;
-  border-bottom: 1px solid rgb(229, 229, 229);
+  width: 100%;
+  flex-flow: column nowrap;
+  border-bottom: 1px solid rgb(222, 222, 222);
 }
 .post__title {
-  position: absolute;
-  left: 13px;
-  top: 14px;
-  font-family: "Lora", serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 21px;
-  letter-spacing: 0em;
-  text-align: left;
+  position: relative;
+  font: 400 16px/21px "Lora", serif;
   color: rgb(16, 19, 21);
+  padding: 14px 0 0 13px;
 }
 .post__desc {
-  position: absolute;
-  left: 13px;
-  top: 41px;
-  font-family: "Oxygen", sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 19px;
-  letter-spacing: 0em;
-  text-align: left;
+  position: relative;
+  font: 400 13px/19px "Oxygen", sans-serif;
   color: rgb(122, 122, 122);
+  padding: 6px 0 0 13px;
 }
 .post-creator {
-  position: absolute;
+  position: relative;
   display: flex;
-  margin-left: 13px;
-  margin-right: 13px;
-  width: calc(100% - 26px);
-  height: 48px;
-  align-self: flex-start;
+  padding: 0 13px;
+  min-height: 48px;
   flex-flow: row nowrap;
-  align-content: normal;
   justify-content: space-between;
   align-items: center;
 }
@@ -375,26 +315,22 @@ body {
   border-radius: 60px;  
 }
 .post-creator__name {
-  position: absolute;
-  left: 49px;
+  position: relative;
+  flex: auto;
+  margin-left: 10px;
 }
 .creator-font {
-  font-family: "Oxygen", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 35px;
-  letter-spacing: 0em;
-  text-align: left;
+  font: 400 12px/35px "Oxygen", sans-serif;
   color: rgb(153, 153, 153);
 }
 .footer {
-  display: flex;
   width: 100%;
-  height: 89px;
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
   margin: 0;
+  padding: 28px 0 27px 0;
+
 }
 .footer-background {
   background-image: url(images/Footer.png);
@@ -404,7 +340,21 @@ body {
 }
 .footer-link {
   color: rgba(255, 255, 255, 0.6);
+  gap: 20px;
+}
+.footer-link:last-child {
+  margin-right: 10px;
 }
 .footer__logo {
-  padding: 3px 0px 5px 10px; 
+  display: inline-block;
+}
+.footer-container {
+  display: flex;
+  position: relative;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  min-height: 34px;
 }

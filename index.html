@@ -1,196 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
-    <link href="styles-index.css" rel="stylesheet">
-    <style>
-      @import url(
-      'https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
-      @import url(
-      'https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap');
-    </style>  
-    <title>Home Page</title>
-  </head>
 
-  <body>
-    <div class="banner">
-      <header class="header container"> 
-          <img src="images/EscapeFoot.svg" class="header__logo" alt="No Header Logo">
-          <nav class="navigation">
-            <ui class="navigation__list">
-              <li class="navigation__item">
-                <a class="navigation__link" href="#">HOME</a></li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="#">CATEGORIES</a></li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="#">ABOUT</a></li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="#">CONTACT</a></li>
-            </ui>
-          </nav>
-      </header>
-      <div class="banner__title">
-        <h1 class="title__text title-text-style">Let's do it together.</h1>
-        <p class="title__undertext title-undertext-style">
-        We travel the world in search of stories. Come along for the ride.</p>
-        <button class="title__button title-button-slyle">View Latest Posts</button>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles-index.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&display=swap');
+  </style>
+  <title>Home Page</title>
+</head>
 
-    </div>
-    <div class="undermain">
-      <div class="undermain-links">
-        <a class="undermain-links__link">Nature</a>
-        <a class="undermain-links__link">Photography</a>
-        <a class="undermain-links__link">Relaxation</a>
-        <a class="undermain-links__link">Vacation</a>
-        <a class="undermain-links__link">Travel</a>
-        <a class="undermain-links__link">Adventure</a>
-      </div>
-    </div>
-
-    <div class="posts">
-      <div class="featured-posts">
-        <p class="featured-posts__title posts-tiltes-style">Featured Posts</p>
-        <div class="featured-posts-container">
-          <div class="feature-post the-road-ahead">
-            <div class="feature-post-content">
-              <a class="feature-post-content__title" href="the-road-ahead.html">
-              The Road Ahead</a>
-              <a class="feature-post-content__desc">
-              The road ahead might be paved - it might not be.</a>
-              <div class="featured-post-creator">
-                <img class="featured-post-creator__image" 
-                src="images/posts-creators/mat-vogels-creator.png" alt="No Creator Image">
-                <a class="featured-post-creator__name">Mat Vogels</a>
-                <a class="featured-post-creator__creation-date">September 25, 2015</a>
-              </div>
-            </div>
-          </div>
-          <div class="feature-post from-top-down">
-            <button class="button-adventure">ADVENTURE</button>
-            <div class="feature-post-content">
-              <a class="feature-post-content__title">From Top Down</a>
-              <a class="feature-post-content__desc">
-              Once a year, go someplace you`ve never been before.</a>
-              <div class="featured-post-creator">
-                <img class="featured-post-creator__image" 
-                src="images/posts-creators/william-wong-creator.png" alt="No Creator Image">
-                <a class="featured-post-creator__name">William Wong</a>
-                <a class="featured-post-creator__creation-date">September 25, 2015</a>
-              </div>
-            </div>
-          </div>
-        </div>  
-      </div>
-      <div class="most-recent-posts">
-        <a class="most-recent-posts__title posts-tiltes-style">Most Recent</a>
-        <div class="posts-container">
-          <div class="post">
-            <img class="post-image" 
-            src="images/posts-images/still-standing-tall.png" alt="No Image">
-            <div class="post-content">
-              <a class="post__title">Still Standing Tall</a>
-              <a class="post__desc">Life begins at the end of your comfort zone.</a>
-            </div>
-            <div class="post-creator">
-              <img class="post-creator__image" 
-              src="images/posts-creators/william-wong-creator.png" alt="No Creator Image">
-              <a class="post-creator__name creator-font">William Wong</a>
-              <a class="post-creator__creation-date creator-font">9/25/2015</a>
-            </div>
-          </div>
-          <div class="post">
-            <img class="post-image" 
-            src="images/posts-images/sunny-side-up.png" alt="No Image">
-            <div class="post-content">
-              <a class="post__title">Sunny Side Up</a>
-              <a class="post__desc">No place is ever as bad as they tell you it`s going to be.</a>
-            </div>
-            <div class="post-creator">
-              <img class="post-creator__image" 
-              src="images/posts-creators/mat-vogels-creator.png" alt="No Creator Image">
-              <a class="post-creator__name creator-font">Mat Vogels</a>
-              <a class="post-creator__creation-date creator-font">9/25/2015</a>
-            </div>
-          </div>
-          <div class="post">
-            <img class="post-image" 
-            src="images/posts-images/water-falls.png" alt="No Image">
-            <div class="post-content">
-              <a class="post__title">Water Falls</a>
-              <a class="post__desc">We travel not to escape life, but for life not to escape us.</a>
-            </div>
-            <div class="post-creator">
-              <img class="post-creator__image" 
-              src="images/posts-creators/mat-vogels-creator.png" alt="No Creator Image">
-              <a class="post-creator__name creator-font">Mat Vogels</a>
-              <a class="post-creator__creation-date creator-font">9/25/2015</a>
-            </div>
-          </div>
-          <div class="post">
-            <img class="post-image" 
-            src="images/posts-images/throught-the-mist.png" alt="No Image">
-            <div class="post-content">
-              <a class="post__title">Through the Mist</a>
-              <a class="post__desc">Travel makes you see what a tiny place you occupy in the world.</a>
-            </div>
-            <div class="post-creator">
-              <img class="post-creator__image" 
-              src="images/posts-creators/william-wong-creator.png" alt="No Creator Image">
-              <a class="post-creator__name creator-font">William Wong</a>
-              <a class="post-creator__creation-date creator-font">9/25/2015</a>
-            </div>
-          </div>
-          <div class="post">
-            <img class="post-image" 
-            src="images/posts-images/awaken-early.png" alt="No Image">
-            <div class="post-content">
-              <a class="post__title">Awaken Early</a>
-              <a class="post__desc">Not all those who wander are lost.</a>
-            </div>
-            <div class="post-creator">
-              <img class="post-creator__image" 
-              src="images/posts-creators/mat-vogels-creator.png" alt="No Creator Image">
-              <a class="post-creator__name creator-font">Mat Vogels</a>
-              <a class="post-creator__creation-date creator-font">9/25/2015</a>
-            </div>
-          </div>
-          <div class="post">
-            <img class="post-image" 
-            src="images/posts-images/try-it-always.png" alt="No Image">
-            <div class="post-content">
-              <a class="post__title">Try it Always</a>
-              <a class="post__desc">The world is a book, and those who do not travel read only one page.</a>
-            </div>
-            <div class="post-creator">
-              <img class="post-creator__image" 
-              src="images/posts-creators/mat-vogels-creator.png" alt="No Creator Image">
-              <a class="post-creator__name creator-font">Mat Vogels</a>
-              <a class="post-creator__creation-date creator-font">9/25/2015</a>
-            </div>
-          </div>
-        </div>
-      </div> 
-    </div>
-
-    <footer class="footer container footer-background">
-      <img src="images/EscapeFoot.svg" class="footer__logo" alt="No Footer Logo">
+<body>
+  <div class="banner">
+    <header class="header container">
+      <img src="images/EscapeFoot.svg" class="header__logo" alt="No Header Logo">
       <nav class="navigation">
         <ui class="navigation__list">
           <li class="navigation__item">
-            <a class="navigation__link footer-link" href="#">HOME</a></li>
+            <a class="navigation__link" href="#">home</a></li>
           <li class="navigation__item">
-            <a class="navigation__link footer-link" href="#">CATEGORIES</a></li>
+            <a class="navigation__link" href="#">categories</a></li>
           <li class="navigation__item">
-            <a class="navigation__link footer-link" href="#">ABOUT</a></li>
+            <a class="navigation__link" href="#">about</a></li>
           <li class="navigation__item">
-            <a class="navigation__link footer-link" href="#">CONTACT</a></li>
+            <a class="navigation__link" href="#">contact</a></li>
         </ui>
       </nav>
-    </footer>
+    </header>
+    <div class="banner__title">
+      <h1 class="banner__title-text">Let's do it together.</h1>
+      <p class="banner__title-undertext title-undertext-style">
+        We travel the world in search of stories. Come along for the ride.</p>
+      <a class="banner__title-latest" href="#">View Latest Posts</a>
+    </div>
 
-  </body>
+  </div>
+  <div class="underbanner container">
+    <ui class="underbanner-list">
+      <li class="underbanner-list__item">
+        <a class="undermain-links__link" href="#">nature</a></li>
+      <li class="underbanner-list__item">
+        <a class="undermain-links__link" href="#">photography</a></li>
+      <li class="underbanner-list__item">
+        <a class="undermain-links__link" href="#">relaxation</a></li>
+      <li class="underbanner-list__item">
+        <a class="undermain-links__link" href="#">vacation</a></li>
+      <li class="underbanner-list__item">
+        <a class="undermain-links__link" href="#">travel</a></li>
+      <li class="underbanner-list__item">
+        <a class="undermain-links__link" href="#">adventure</a></li>
+    </ui>
+  </div>
+
+  <main class="posts">
+    <div class="featured-posts">
+      <p class="featured-posts__title posts-tiltes-style">Featured Posts</p>
+      <div class="featured-posts-container">
+        <div class="feature-post the-road-ahead">
+          <div class="feature-post-content">
+            <a class="feature-post-content__title" href="the-road-ahead.html">
+              the road ahead</a>
+            <a class="feature-post-content__desc">
+              The road ahead might be paved - it might not be.</a>
+            <div class="featured-post-creator">
+              <img class="featured-post-creator__image" src="images/posts-creators/mat-vogels-creator.png"
+                alt="Mat Vogels">
+              <a class="featured-post-creator__name">Mat Vogels</a>
+              <a class="featured-post-creator__creation-date">September 25, 2015</a>
+            </div>
+          </div>
+        </div>
+        <div class="feature-post from-top-down">
+
+          <div class="feature-post-content">
+            <a class="feature-post-content__title">from top down</a>
+            <a class="feature-post-content__desc">
+              Once a year, go someplace you`ve never been before.</a>
+            <div class="featured-post-creator">
+              <img class="featured-post-creator__image" src="images/posts-creators/william-wong-creator.png"
+                alt="William Wong">
+              <a class="featured-post-creator__name">William Wong</a>
+              <a class="featured-post-creator__creation-date">September 25, 2015</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="most-recent-posts">
+      <a class="most-recent-posts__title posts-tiltes-style">Most Recent</a>
+      <div class="posts-container">
+        <div class="post">
+          <img class="post-image" src="images/posts-images/still-standing-tall.png" 
+          alt="Still Standing Tall">
+          <div class="post-content">
+            <a class="post__title">Still Standing Tall</a>
+            <a class="post__desc">Life begins at the end of your comfort zone.</a>
+          </div>
+          <div class="post-creator">
+            <img class="post-creator__image" src="images/posts-creators/william-wong-creator.png"
+              alt="William Wong">
+            <a class="post-creator__name creator-font">William Wong</a>
+            <a class="post-creator__creation-date creator-font">9/25/2015</a>
+          </div>
+        </div>
+        <div class="post">
+          <img class="post-image" src="images/posts-images/sunny-side-up.png" 
+          alt="Sunny Side Up">
+          <div class="post-content">
+            <a class="post__title">Sunny Side Up</a>
+            <a class="post__desc">No place is ever as bad as they tell you it`s going to be.</a>
+          </div>
+          <div class="post-creator">
+            <img class="post-creator__image" src="images/posts-creators/mat-vogels-creator.png" 
+            alt="Mat Vogels">
+            <a class="post-creator__name creator-font">Mat Vogels</a>
+            <a class="post-creator__creation-date creator-font">9/25/2015</a>
+          </div>
+        </div>
+        <div class="post">
+          <img class="post-image" src="images/posts-images/water-falls.png" 
+          alt="Water Falls">
+          <div class="post-content">
+            <a class="post__title">Water Falls</a>
+            <a class="post__desc">We travel not to escape life, but for life not to escape us.</a>
+          </div>
+          <div class="post-creator">
+            <img class="post-creator__image" src="images/posts-creators/mat-vogels-creator.png" 
+            alt="Mat Vogels">
+            <a class="post-creator__name creator-font">Mat Vogels</a>
+            <a class="post-creator__creation-date creator-font">9/25/2015</a>
+          </div>
+        </div>
+        <div class="post">
+          <img class="post-image" src="images/posts-images/throught-the-mist.png" 
+          alt="Through The Mist">
+          <div class="post-content">
+            <a class="post__title">Through the Mist</a>
+            <a class="post__desc">Travel makes you see what a tiny place you occupy in the world.</a>
+          </div>
+          <div class="post-creator">
+            <img class="post-creator__image" src="images/posts-creators/william-wong-creator.png"
+              alt="William Wong">
+            <a class="post-creator__name creator-font">William Wong</a>
+            <a class="post-creator__creation-date creator-font">9/25/2015</a>
+          </div>
+        </div>
+        <div class="post">
+          <img class="post-image" src="images/posts-images/awaken-early.png" 
+          alt="Awaken Early">
+          <div class="post-content">
+            <a class="post__title">Awaken Early</a>
+            <a class="post__desc">Not all those who wander are lost.</a>
+          </div>
+          <div class="post-creator">
+            <img class="post-creator__image" src="images/posts-creators/mat-vogels-creator.png" 
+            alt="Mat Vogels">
+            <a class="post-creator__name creator-font">Mat Vogels</a>
+            <a class="post-creator__creation-date creator-font">9/25/2015</a>
+          </div>
+        </div>
+        <div class="post">
+          <img class="post-image" src="images/posts-images/try-it-always.png" 
+          alt="Try It Always">
+          <div class="post-content">
+            <a class="post__title">Try it Always</a>
+            <a class="post__desc">The world is a book, and those who do not travel read only one page.</a>
+          </div>
+          <div class="post-creator">
+            <img class="post-creator__image" src="images/posts-creators/mat-vogels-creator.png" 
+            alt="Mat Vogels">
+            <a class="post-creator__name creator-font">Mat Vogels</a>
+            <a class="post-creator__creation-date creator-font">9/25/2015</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer footer-background">
+    <div class="footer-container">
+      <img src="images/EscapeFoot.svg" class="footer__logo" alt="No Header Logo">
+      <nav class="navigation">
+        <ui class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link footer-link" href="#">home</a></li>
+          <li class="navigation__item">
+            <a class="navigation__link footer-link" href="#">categories</a></li>
+          <li class="navigation__item">
+            <a class="navigation__link footer-link" href="#">about</a></li>
+          <li class="navigation__item">
+            <a class="navigation__link footer-link" href="#">contact</a></li>
+        </ui>
+      </nav>
+    </div>
+  </footer>
+
+</body>
 
 </html>
