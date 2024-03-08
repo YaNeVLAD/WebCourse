@@ -1,3 +1,56 @@
+<?php
+$posts = [
+  [
+    'post__image' => 'styles/images/posts-images/still-standing-tall.png',
+    'post-content__title' => 'Still Standing Tall',
+    'post-content__text' => 'Life begins at the end of your comfort zone.',
+    'post-creator__image' => 'styles/images/posts-creators/william-wong-creator.png',
+    'post-creator__name' => 'William Wong',
+    'post-creator__creation-date' => '9/25/2015',
+  ],
+  [
+    'post__image' => 'styles/images/posts-images/sunny-side-up.png',
+    'post-content__title' => 'Sunny Side Up',
+    'post-content__text' => 'No place is ever as bad as they tell you it`s going to be.',
+    'post-creator__image' => 'styles/images/posts-creators/mat-vogels-creator.png',
+    'post-creator__name' => 'Mat Vogels',
+    'post-creator__creation-date' => '9/25/2015',
+  ],
+  [
+    'post__image' => 'styles/images/posts-images/water-falls.png',
+    'post-content__title' => 'Water Falls',
+    'post-content__text' => 'We travel not to escape life, but for life not to escape us.',
+    'post-creator__image' => 'styles/images/posts-creators/mat-vogels-creator.png',
+    'post-creator__name' => 'Mat Vogels',
+    'post-creator__creation-date' => '9/25/2015',
+  ],
+  [
+    'post__image' => 'styles/images/posts-images/throught-the-mist.png',
+    'post-content__title' => 'Throught The Mist',
+    'post-content__text' => 'Travel makes you see what a tiny place you occupy in the world.',
+    'post-creator__image' => 'styles/images/posts-creators/william-wong-creator.png',
+    'post-creator__name' => 'William Wong',
+    'post-creator__creation-date' => '9/25/2015',
+  ],
+  [
+    'post__image' => 'styles/images/posts-images/awaken-early.png',
+    'post-content__title' => 'Awaken Early',
+    'post-content__text' => 'Not all those who wander are lost.',
+    'post-creator__image' => 'styles/images/posts-creators/mat-vogels-creator.png',
+    'post-creator__name' => 'Mat Vogels',
+    'post-creator__creation-date' => '9/25/2015',
+  ],
+  [
+    'post__image' => 'styles/images/posts-images/try-it-always.png',
+    'post-content__title' => 'Try it Always',
+    'post-content__text' => 'The world is a book, and those who do not travel read only one page.',
+    'post-creator__image' => 'styles/images/posts-creators/mat-vogels-creator.png',
+    'post-creator__name' => 'Mat Vogels',
+    'post-creator__creation-date' => '9/25/2015',
+  ],
+];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,7 +96,6 @@
         We travel the world in search of stories. Come along for the ride.</p>
       <a class="banner-title__latest" href="#">View Latest Posts</a>
     </div>
-
   </div>
   <div class="menu container">
     <ul class="menu__list">
@@ -69,11 +121,10 @@
   </div>
 
   <main class="posts">
-
     <div class="featured">
       <h2 class="featured__title posts-tiltes-style">Featured Posts</h2>
       <div class="featured-posts-container">
-        <a class="featured-post the-road-ahead" href="the-road-ahead.html">
+        <a class="featured-post the-road-ahead" href="post">
           <div class="featured-post-content">
             <h3 class="featured-post-content__title">
               the road ahead</h3>
@@ -106,83 +157,12 @@
     <div class="most-recent-posts">
       <h2 class="most-recent-posts__title posts-tiltes-style">Most Recent</h2>
       <div class="recent-posts-container">
-        <div class="post">
-          <img class="post__image" src="styles/images/posts-images/still-standing-tall.png" alt="Still Standing Tall">
-          <div class="post-content">
-            <h3 class="post-content__title">Still Standing Tall</h3>
-            <p class="post-content__text">Life begins at the end of your comfort zone.</p>
-          </div>
-          <div class="post-creator">
-            <img class="post-creator__image" src="styles/images/posts-creators/william-wong-creator.png"
-              alt="William Wong">
-            <span class="post-creator__name creator-font">William Wong</span>
-            <span class="post-creator__creation-date creator-font">9/25/2015</span>
-          </div>
-        </div>
-        <div class="post">
-          <img class="post__image" src="styles/images/posts-images/sunny-side-up.png" alt="Sunny Side Up">
-          <div class="post-content">
-            <h3 class="post-content__title">Sunny Side Up</h3>
-            <p class="post-content__text">No place is ever as bad as they tell you it`s going to be.</p>
-          </div>
-          <div class="post-creator">
-            <img class="post-creator__image" src="styles/images/posts-creators/mat-vogels-creator.png" alt="Mat Vogels">
-            <span class="post-creator__name creator-font">Mat Vogels</span>
-            <span class="post-creator__creation-date creator-font">9/25/2015</span>
-          </div>
-        </div>
-        <div class="post">
-          <img class="post__image" src="styles/images/posts-images/water-falls.png" alt="Water Falls">
-          <div class="post-content">
-            <h3 class="post-content__title">Water Falls</h3>
-            <p class="post-content__text">We travel not to escape life, but for life not to escape us.</p>
-          </div>
-          <div class="post-creator">
-            <img class="post-creator__image" src="styles/images/posts-creators/mat-vogels-creator.png" alt="Mat Vogels">
-            <span class="post-creator__name creator-font">Mat Vogels</span>
-            <span class="post-creator__creation-date creator-font">9/25/2015</span>
-          </div>
-        </div>
-        <div class="post">
-          <img class="post__image" src="styles/images/posts-images/throught-the-mist.png" alt="Through The Mist">
-          <div class="post-content">
-            <h3 class="post-content__title">Through the Mist</h3>
-            <p class="post-content__text">Travel makes you see what a tiny place you occupy in the world.</p>
-          </div>
-          <div class="post-creator">
-            <img class="post-creator__image" src="styles/images/posts-creators/william-wong-creator.png"
-              alt="William Wong">
-            <span class="post-creator__name creator-font">William Wong</span>
-            <span class="post-creator__creation-date creator-font">9/25/2015</span>
-          </div>
-        </div>
-        <div class="post">
-          <img class="post__image" src="styles/images/posts-images/awaken-early.png" alt="Awaken Early">
-          <div class="post-content">
-            <h3 class="post-content__title">Awaken Early</h3>
-            <p class="post-content__text">Not all those who wander are lost.</p>
-          </div>
-          <div class="post-creator">
-            <img class="post-creator__image" src="styles/images/posts-creators/mat-vogels-creator.png" alt="Mat Vogels">
-            <span class="post-creator__name creator-font">Mat Vogels</span>
-            <span class="post-creator__creation-date creator-font">9/25/2015</span>
-          </div>
-        </div>
-        <div class="post">
-          <img class="post__image" src="styles/images/posts-images/try-it-always.png" alt="Try It Always">
-          <div class="post-content">
-            <h3 class="post-content__title">Try it Always</h3>
-            <p class="post-content__text">The world is a book, and those who do not travel read only one page.</p>
-          </div>
-          <div class="post-creator">
-            <img class="post-creator__image" src="styles/images/posts-creators/mat-vogels-creator.png" alt="Mat Vogels">
-            <span class="post-creator__name creator-font">Mat Vogels</span>
-            <span class="post-creator__creation-date creator-font">9/25/2015</span>
-          </div>
-        </div>
-      </div>
+        <?php
+        foreach ($posts as $post) {
+          include 'post_preview.php';
+        }
+        ?>
     </div>
-
   </main>
 
   <footer class="footer footer-background">
@@ -206,7 +186,6 @@
       </nav>
     </div>
   </footer>
-
 </body>
 
 </html>
