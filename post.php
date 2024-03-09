@@ -98,7 +98,7 @@
     <div class="footer-content">
       <img class="footer-content__footer-logo" src="images/EscapeFoot.svg" alt="No Logo">
       <nav class="footer-navigation">
-        <a class="footer-links__link footer-home" href="index.html"> HOME </a>
+        <a class="footer-links__link footer-home" href="home"> HOME </a>
         <a class="footer-links__link footer-about"> ABOUT </a>
         <a class="footer-links__link footer-contact"> CONTACT </a>
         <a class="footer-links__link footer-categories"> CATEGORIES </a>

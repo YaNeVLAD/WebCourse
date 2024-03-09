@@ -1,52 +1,73 @@
+<!-- Дата: timestamp, конверуется в samplах с помощью функции с редактируемым форматом-->
 <?php
-$posts = [
+$featured_posts = [
   [
-    'post__image' => 'styles/images/posts-images/still-standing-tall.png',
-    'post-content__title' => 'Still Standing Tall',
-    'post-content__text' => 'Life begins at the end of your comfort zone.',
-    'post-creator__image' => 'styles/images/posts-creators/william-wong-creator.png',
-    'post-creator__name' => 'William Wong',
-    'post-creator__creation-date' => '9/25/2015',
+    'link' => 'post',
+    'background' => 'background-image: url(static/posts-images/the-road-ahead.png); background-position: center; background-size: cover;',
+    'title' => 'The Road Ahead',
+    'text' => 'The road ahead might be paved - it might not be.',
+    'author-image' => 'static/posts-creators/mat-vogels-creator.png',
+    'author-name' => 'Mat Vogels',
+    'creation-date' => '1443171600',
   ],
   [
-    'post__image' => 'styles/images/posts-images/sunny-side-up.png',
-    'post-content__title' => 'Sunny Side Up',
-    'post-content__text' => 'No place is ever as bad as they tell you it`s going to be.',
-    'post-creator__image' => 'styles/images/posts-creators/mat-vogels-creator.png',
-    'post-creator__name' => 'Mat Vogels',
-    'post-creator__creation-date' => '9/25/2015',
+    'link' => '#',
+    'background' => 'background-image: url(static/posts-images/from-top-down.png); background-position: center; background-size: cover;',
+    'title' => 'From Top Down',
+    'text' => 'Once a year, go someplace you`ve never been before.',
+    'author-image' => 'static/posts-creators/william-wong-creator.png',
+    'author-name' => 'William Wong',
+    'creation-date' => '1443171600',
+  ],
+];
+$recent_posts = [
+  [
+    'image' => 'static/posts-images/still-standing-tall.png',
+    'title' => 'Still Standing Tall',
+    'text' => 'Life begins at the end of your comfort zone.',
+    'author-image' => 'static/posts-creators/william-wong-creator.png',
+    'author-name' => 'William Wong',
+    'creation-date' => '1443171600',
   ],
   [
-    'post__image' => 'styles/images/posts-images/water-falls.png',
-    'post-content__title' => 'Water Falls',
-    'post-content__text' => 'We travel not to escape life, but for life not to escape us.',
-    'post-creator__image' => 'styles/images/posts-creators/mat-vogels-creator.png',
-    'post-creator__name' => 'Mat Vogels',
-    'post-creator__creation-date' => '9/25/2015',
+    'image' => 'static/posts-images/sunny-side-up.png',
+    'title' => 'Sunny Side Up',
+    'text' => 'No place is ever as bad as they tell you it`s going to be.',
+    'author-image' => 'static/posts-creators/mat-vogels-creator.png',
+    'author-name' => 'Mat Vogels',
+    'creation-date' => '1443171600',
   ],
   [
-    'post__image' => 'styles/images/posts-images/throught-the-mist.png',
-    'post-content__title' => 'Throught The Mist',
-    'post-content__text' => 'Travel makes you see what a tiny place you occupy in the world.',
-    'post-creator__image' => 'styles/images/posts-creators/william-wong-creator.png',
-    'post-creator__name' => 'William Wong',
-    'post-creator__creation-date' => '9/25/2015',
+    'image' => 'static/posts-images/water-falls.png',
+    'title' => 'Water Falls',
+    'text' => 'We travel not to escape life, but for life not to escape us.',
+    'author-image' => 'static/posts-creators/mat-vogels-creator.png',
+    'author-name' => 'Mat Vogels',
+    'creation-date' => '1443171600',
   ],
   [
-    'post__image' => 'styles/images/posts-images/awaken-early.png',
-    'post-content__title' => 'Awaken Early',
-    'post-content__text' => 'Not all those who wander are lost.',
-    'post-creator__image' => 'styles/images/posts-creators/mat-vogels-creator.png',
-    'post-creator__name' => 'Mat Vogels',
-    'post-creator__creation-date' => '9/25/2015',
+    'image' => 'static/posts-images/throught-the-mist.png',
+    'title' => 'Throught The Mist',
+    'text' => 'Travel makes you see what a tiny place you occupy in the world.',
+    'author-image' => 'static/posts-creators/william-wong-creator.png',
+    'author-name' => 'William Wong',
+    'creation-date' => '1443171600',
   ],
   [
-    'post__image' => 'styles/images/posts-images/try-it-always.png',
-    'post-content__title' => 'Try it Always',
-    'post-content__text' => 'The world is a book, and those who do not travel read only one page.',
-    'post-creator__image' => 'styles/images/posts-creators/mat-vogels-creator.png',
-    'post-creator__name' => 'Mat Vogels',
-    'post-creator__creation-date' => '9/25/2015',
+    'image' => 'static/posts-images/awaken-early.png',
+    'title' => 'Awaken Early',
+    'text' => 'Not all those who wander are lost.',
+    'author-image' => 'static/posts-creators/mat-vogels-creator.png',
+    'author-name' => 'Mat Vogels',
+    'creation-date' => '1443171600',
+  ],
+  [
+    'image' => 'static/posts-images/try-it-always.png',
+    'title' => 'Try it Always',
+    'text' => 'The world is a book, and those who do not travel read only one page.',
+    'author-image' => 'static/posts-creators/mat-vogels-creator.png',
+    'author-name' => 'Mat Vogels',
+    'creation-date' => '1443171600',
   ],
 ];
 ?>
@@ -57,11 +78,11 @@ $posts = [
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="styles/styles-index.css" rel="stylesheet">
+  <link href="static/styles/styles-index.css" rel="stylesheet">
   <!--preconnect позволяет заранее отправить запрос на сервер для загрузки шрифтов, 
       таким образом их подгрузка на странице происходит быстрее.
       crossorigin позволяет выполнить загрузку шрифтов со второго сайта, если по
-      каким-то причинам первый не сработал.
+      каким-то причинам первый не доступен.
    -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,33 +92,33 @@ $posts = [
 
 <body>
   <div class="banner">
-    <header class="header container">
-      <img src="styles/images/EscapeFoot.svg" class="header__logo" alt="No Header Logo">
-      <nav class="navigation">
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">home</a>
+    <header class="header-container">
+      <img src="static/LogoFoot.svg" class="header__logo" alt="No Header Logo">
+      <nav class="header-navigation">
+        <ul class="header-navigation__list">
+          <li class="header-navigation__item">
+            <a class="header-navigation__link" href="#">home</a>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">categories</a>
+          <li class="header-navigation__item">
+            <a class="header-navigation__link" href="#">categories</a>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">about</a>
+          <li class="header-navigation__item">
+            <a class="header-navigation__link" href="#">about</a>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">contact</a>
+          <li class="header-navigation__item">
+            <a class="header-navigation__link" href="#">contact</a>
           </li>
         </ul>
       </nav>
     </header>
-    <div class="banner-title">
-      <h1 class="banner-title__text">Let's do it together.</h1>
-      <p class="banner-title__undertext title-undertext-style">
+    <div class="banner__title">
+      <h1 class="banner__text">Let's do it together.</h1>
+      <p class="banner__undertext">
         We travel the world in search of stories. Come along for the ride.</p>
-      <a class="banner-title__latest" href="#">View Latest Posts</a>
+      <span class="banner__latest">View Latest Posts</span>
     </div>
   </div>
-  <div class="menu container">
+  <div class="menu">
     <ul class="menu__list">
       <li class="menu__item">
         <a class="menu__link" href="#">nature</a>
@@ -122,65 +143,42 @@ $posts = [
 
   <main class="posts">
     <div class="featured">
-      <h2 class="featured__title posts-tiltes-style">Featured Posts</h2>
+      <h2 class="featured__title">Featured Posts</h2>
       <div class="featured-posts-container">
-        <a class="featured-post the-road-ahead" href="post">
-          <div class="featured-post-content">
-            <h3 class="featured-post-content__title">
-              the road ahead</h3>
-            <p class="featured-post-content__text">
-              The road ahead might be paved - it might not be.</p>
-            <div class="featured-post-creator">
-              <img class="featured-post-creator__image" src="styles/images/posts-creators/mat-vogels-creator.png"
-                alt="Mat Vogels">
-              <span class="featured-post-creator__name featured-creator-font">Mat Vogels</span>
-              <span class="featured-post-creator__creation-date featured-creator-font">September 25, 2015</span>
-            </div>
-          </div>
-        </a>
-        <div class="featured-post from-top-down">
-          <a class="featured-post__adventure-link" href="#">adventure</a>
-          <div class="featured-post-content">
-            <h3 class="featured-post-content__title">from top down</h3>
-            <p class="featured-post-content__text">
-              Once a year, go someplace you`ve never been before.</p>
-            <div class="featured-post-creator">
-              <img class="featured-post-creator__image" src="styles/images/posts-creators/william-wong-creator.png"
-                alt="William Wong">
-              <span class="featured-post-creator__name featured-creator-font">William Wong</span>
-              <span class="featured-post-creator__creation-date featured-creator-font">September 25, 2015</span>
-            </div>
-          </div>
-        </div>
+        <?php
+        foreach ($featured_posts as $featured_post) {
+          include 'featured-post_sample.php';
+        }
+        ?>
       </div>
     </div>
     <div class="most-recent-posts">
-      <h2 class="most-recent-posts__title posts-tiltes-style">Most Recent</h2>
+      <h2 class="most-recent-posts__title">Most Recent</h2>
       <div class="recent-posts-container">
         <?php
-        foreach ($posts as $post) {
-          include 'post_preview.php';
+        foreach ($recent_posts as $recent_post) {
+          include 'post_sample.php';
         }
         ?>
-    </div>
+      </div>
   </main>
 
-  <footer class="footer footer-background">
+  <footer class="footer_footer-background">
     <div class="footer-container">
-      <img src="styles/images/EscapeFoot.svg" class="footer__logo" alt="No Footer Logo">
-      <nav class="navigation">
-        <ul class="navigation__list">
-          <li class="navigation__item footer-navigation-item">
-            <a class="navigation__link footer-link" href="#">home</a>
+      <img src="static/LogoFoot.svg" class="footer__logo" alt="No Footer Logo">
+      <nav class="footer-navigation">
+        <ul class="footer-navigation__list">
+          <li class="footer-navigation__item">
+            <a class="footer-navigation__link" href="#">home</a>
           </li>
-          <li class="navigation__item footer-navigation-item">
-            <a class="navigation__link footer-link" href="#">categories</a>
+          <li class="footer-navigation__item">
+            <a class="footer-navigation__link" href="#">categories</a>
           </li>
-          <li class="navigation__item footer-navigation-item">
-            <a class="navigation__link footer-link" href="#">about</a>
+          <li class="footer-navigation__item">
+            <a class="footer-navigation__link" href="#">about</a>
           </li>
-          <li class="navigation__item footer-navigation-item">
-            <a class="navigation__link footer-link" href="#">contact</a>
+          <li class="footer-navigation__item">
+            <a class="footer-navigation__link" href="#">contact</a>
           </li>
         </ul>
       </nav>
