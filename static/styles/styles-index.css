@@ -12,11 +12,11 @@ body {
   min-height: 500px;
   background-position: center;
   background-size: cover;
-  background-image: url(../main_image.png);
+  background-image: url(https://localhost/static/main_image.png);
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: darken;
 }
-.header-container {
+.header {
   display: flex;
   position: relative;
   flex-flow: row wrap;
@@ -25,16 +25,16 @@ body {
   max-width: 940px;
   margin: 17px auto;
 }
-.header-navigation__list {
+.header__list {
   display: inline;
   list-style-type: none;
   vertical-align: middle;
 }
-.header-navigation__item {
+.header__item {
   display: inline;
   margin: 0 20px;
 }
-.header-navigation__link {
+.header__link {
   font: 400 12px/20px "Oxygen", sans-serif;
   color: rgb(255, 255, 255);
   letter-spacing: 0.60px;
@@ -63,13 +63,15 @@ body {
   color: rgba(255, 255, 255, 0.63);
   margin-bottom: 31px;
 }
-.banner__latest {
+.banner__title-button {
   display: inline-block;
   text-decoration: none;
+  animation: none;
   font: 400 13px/20px "Oxygen", sans-serif;
   text-align: center;
   color: rgb(255, 255, 255);
   padding: 12px 31px;
+  border: 0px;
   border-radius: 3px;
   background: rgb(221, 120, 63);
   margin: 0 auto;
@@ -124,16 +126,15 @@ body {
   width: 100%;
 }
 .featured__title {
-  display: flex;
   margin: 60px 0px 16px 0px;
-  height: 44px;
-  width: 188px;
+  min-height: 44px;
+  min-width: 188px;
   border-bottom: 1px solid rgb(222, 222, 222);
-  justify-content: center;
   font: 400 20px/27px  "Oxygen", sans-serif;
   letter-spacing: 2px;
+  text-align: center;
 }
-.featured-posts-container {
+.featured__posts-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -148,17 +149,16 @@ body {
   align-items: flex-start;
   flex-direction: column;
   justify-content: flex-end;
+  background-position: center; 
+  background-size: cover;
 }
-.featured-post-content {
+.featured-post__content {
   float: inline-end;
-  display: flex;
   position: relative;
   width: 100%;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
   min-height: 181px;
 }
-.featured-post-content__title {
+.featured-post__title {
   position: relative;
   font: 400 27px/30px "Lora", serif;
   color: rgb(255, 255, 255);;
@@ -166,13 +166,13 @@ body {
   text-decoration: none;
   padding: 58px 0 0 20px;
 }
-.featured-post-content__text {
+.featured-post__text {
   position: relative;
   font: 400 14px / 25px "Oxygen", sans-serif;
   color: rgba(255, 255, 255, 0.7);
   padding: 6px 0 0 20px;
 }
-.featured-post-content__author-block {
+.featured-post__author-block {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -182,22 +182,22 @@ body {
   min-height: 35px;
   padding: 12px 20px 15px 20px;
 }
-.featured-post-content__author-image {
+.featured-post__author-image {
   width: 26px;
   height: 26px;
   border-radius: 60px;
 }
-.featured-post-content__author-name {
+.featured-post__author-name {
   margin-left: 10px;
   flex: auto;
   font: 400 12px/35px "Oxygen", sans-serif;
   color: rgba(255, 255, 255, 0.7); 
 }
-.featured-post-content__creation-date {
+.featured-post__creation-date {
   font: 400 12px/35px "Oxygen", sans-serif;
   color: rgba(255, 255, 255, 0.7);  
 }
-.featured-post__adventure-link {
+.featured-post__button {
   display: inline-block;
   position: absolute;
   left: 20px;
@@ -211,7 +211,7 @@ body {
   color: rgb(255, 255, 255);;
 }
 
-.most-recent-posts {
+.most-recent {
   position: relative;
   display: flex;
   flex-flow: column nowrap;
@@ -220,17 +220,16 @@ body {
   align-items: center;
   width: 100%;
 }
-.most-recent-posts__title {
-  display: flex;
+.most-recent__title {
   margin: 60px 0px 16px 0px;
-  height: 44px;
-  width: 188px;
+  min-height: 44px;
+  min-width: 188px;
   border-bottom: 1px solid rgb(222, 222, 222);
-  justify-content: center;
   font: 400 20px/27px  "Oxygen", sans-serif;
-  letter-spacing: 2px;  
+  letter-spacing: 2px; 
+  text-align: center;
 }
-.recent-posts-container {
+.most-recent__posts-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -243,26 +242,26 @@ body {
   height: 291px;
   width: 296px;
   margin: 12px;
-  background-color: rgb(255, 255, 255);;
+  background-color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 .post__image {
   height: 150px;
   width: 296px;
-  border-bottom: 1px solid
+  border-bottom: 1px solid;
 }
-.post-content {
-  flex-flow: column nowrap;
+.post__content {
   min-height: 93px;
   border-bottom: 1px solid rgb(222, 222, 222);
 }
-.post-content__title {
+.post__title {
   font: 400 16px/21px "Lora", serif;
   color: rgb(16, 19, 21);
   padding: 14px 0 0 13px;
   text-decoration: none;
   display: block;
 }
-.post-content__text {
+.post__text {
   font: 400 13px/19px "Oxygen", sans-serif;
   color: rgb(122, 122, 122);
   padding: 6px 0 0 13px;
@@ -298,12 +297,12 @@ body {
   align-items: center;
   margin: 0;
   padding: 28px 0 27px 0;
-  background-image: url(../Footer.png);
+  background-image: url(https://localhost/static/footer-background.png);
   background-position: center;
   background-color: rgba(35, 47, 56, 0.6);
   background-blend-mode: darken;
 }
-.footer-container {
+.footer__content {
   display: flex;
   position: relative;
   flex-flow: row wrap;
@@ -313,16 +312,16 @@ body {
   margin: 0 auto;
   min-height: 34px;
 }
-.footer-navigation__list {
+.footer__list {
   display: inline;
   list-style-type: none;
   vertical-align: middle;
 }
-.footer-navigation__item {
+.footer__item {
   display: inline;
   margin: 10px;
 }
-.footer-navigation__link {
+.footer__link {
   font: 400 12px/20px "Oxygen", sans-serif;
   color: rgba(255, 255, 255, 0.6);
   letter-spacing: 0.60px;
