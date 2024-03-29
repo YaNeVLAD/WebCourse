@@ -19,7 +19,7 @@ function saveImage(string $imageBase64)
     $imageBase64Array = explode(';base64,', $imageBase64);
     $imgExtention = str_replace('data:image/', '', $imageBase64Array[0]);
     $imageDecoded = base64_decode($imageBase64Array[1]);
-    saveFile("static/image.{$imgExtention}", $imageDecoded);
+    saveFile("static/post-images/image.{$imgExtention}", $imageDecoded);
 }
 //  Вывод запроса 
 $method = $_SERVER['REQUEST_METHOD'];

@@ -197,7 +197,7 @@ body {
   font: 400 12px/35px "Oxygen", sans-serif;
   color: rgba(255, 255, 255, 0.7);  
 }
-.featured-post__button {
+.featured-post__button-categorie {
   display: inline-block;
   position: absolute;
   left: 20px;
