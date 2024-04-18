@@ -1,5 +1,7 @@
 <?php
-require_once 'database-connections.php';
+require_once 'databaseFunctions.php';
+var_dump($_POST);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,7 +73,7 @@ require_once 'database-connections.php';
       <div class="featured__posts-container">
         <?php
         $database = createDBConnection();
-        $request = mysqli_query($database, "SELECT  *FROM post WHERE featured = 1");
+        $request = mysqli_query($database, "SELECT * FROM post WHERE featured = 1");
         while ($featured_post = mysqli_fetch_assoc($request)) {
           include 'featured-post_sample.php';
         }
