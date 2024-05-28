@@ -1,6 +1,10 @@
 <?php
+<<<<<<< HEAD
 require_once 'postFunctions.php';
 require_once 'databaseFunctions.php';
+=======
+require_once 'database-connections.php';
+>>>>>>> 9eddfbd732b3616be3f0cccef27ee367cd5ba148
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +14,11 @@ require_once 'databaseFunctions.php';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<<<<<<< HEAD
   <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen&family=Roboto&display=swap" rel="stylesheet">
+=======
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen:wght@400&display=swap" rel="stylesheet">
+>>>>>>> 9eddfbd732b3616be3f0cccef27ee367cd5ba148
   <link href="static/styles/styles-index.css" rel="stylesheet">
   <title>Home Page</title>
 </head>
@@ -89,7 +97,11 @@ require_once 'databaseFunctions.php';
       <div class="featured__posts-container">
         <?php
         $database = createDBConnection();
+<<<<<<< HEAD
         $request = mysqli_query($database, "SELECT * FROM post WHERE featured = 1");
+=======
+        $request = mysqli_query($database, "SELECT  *FROM post WHERE featured = 1");
+>>>>>>> 9eddfbd732b3616be3f0cccef27ee367cd5ba148
         while ($featured_post = mysqli_fetch_assoc($request)) {
           include 'featured-post_sample.php';
         }
@@ -112,6 +124,7 @@ require_once 'databaseFunctions.php';
   </main>
 
   <footer class="footer_footer-background">
+<<<<<<< HEAD
     <div class="footer__stay-in-touch">
       <h2 class="footer__form-title">Stay In Touch</h2>
       <form class="footer__form">
@@ -139,6 +152,26 @@ require_once 'databaseFunctions.php';
           </ul>
         </nav>
       </div>
+=======
+    <div class="footer__content">
+      <img class="footer__logo" src="static/logo-foot.svg" alt="Footer Logo">
+      <nav class="footer__navigation">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="home">home</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">categories</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">about</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">contact</a>
+          </li>
+        </ul>
+      </nav>
+>>>>>>> 9eddfbd732b3616be3f0cccef27ee367cd5ba148
     </div>
   </footer>
 </body>

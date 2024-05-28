@@ -1,6 +1,10 @@
 <a class="post" href='/post?id=<?= $recent_post['id'] ?>'>
+<<<<<<< HEAD
   <div class="post__image" style="background-image: url(<?= $recent_post['image_url'] ?>);">
   </div>
+=======
+  <img class="post__image" src="<?= $recent_post['image_url'] ?>" alt="<?= $recent_post['title'] ?>">
+>>>>>>> 9eddfbd732b3616be3f0cccef27ee367cd5ba148
   <div class="post__content">
     <h3 class="post__title">
       <?= $recent_post['title'] ?>
