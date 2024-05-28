@@ -125,7 +125,7 @@ if (!authBySession()) {
                         </div>
                         <span class="form__imageHint">Size up to 10mb. Format: png, jpeg, gif.</span>
                         <div class="loadedFile hidden">
-                            <label class="loadedFile__new" for="author_url">
+                            <label class="loadedFile__new" for="image_url">
                                 <img src="static/admin-images/upload-button.svg" alt="">
                                 <span class="loadedFile__span">Upload New</span>
                             </label>
@@ -153,7 +153,7 @@ if (!authBySession()) {
                         </div>
                         <span class="form__imageHint">Size up to 5mb. Format: png, jpeg, gif.</span>
                         <div class="loadedFile hidden">
-                            <label class="loadedFile__new" for="author_url">
+                            <label class="loadedFile__new" for="small_image_url">
                                 <img src="static/admin-images/upload-button.svg" alt="">
                                 <span class="loadedFile__span">Upload New</span>
                             </label>

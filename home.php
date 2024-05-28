@@ -1,5 +1,5 @@
 <?php
-require_once 'database-connections.php';
+require_once 'databaseFunctions.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

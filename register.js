@@ -119,7 +119,7 @@ async function sendRequest(data) {
             if (json.status === 200) {
                 submitButton.removeAttribute('disabled');
                 setStatus(submitResultParent, okStatus);
-                //window.location.href = 'admin';
+                window.location.href = 'admin';
             } else {
                 setStatus(submitResultParent, failServerStatus);
                 submitButton.removeAttribute('disabled');

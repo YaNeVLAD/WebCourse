@@ -26,7 +26,7 @@
             <div class="submitStatus" id="result">
                 <div class="submitFail hidden">
                     <img src="static/login-images/submit-fail.svg" class="submitFail__img">
-                    <span class="submitFail__span">Email or password is incorrect.</span>
+                    <span class="submitFail__span">Your email has been already taken</span>
                 </div>
                 <div class="submitFail hidden">
                     <img src="static/login-images/submit-fail.svg" class="submitFail__img">
