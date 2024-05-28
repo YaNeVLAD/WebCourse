@@ -1,6 +1,6 @@
 <?php
+require_once 'postFunctions.php';
 require_once 'databaseFunctions.php';
-
 
 if (array_key_exists('id', $_GET)) {
   $postId = (int) $_GET['id'];
