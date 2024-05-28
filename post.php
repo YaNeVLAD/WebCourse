@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 require_once 'postFunctions.php';
 require_once 'databaseFunctions.php';
 
@@ -15,27 +14,6 @@ $post = mysqli_fetch_assoc($result);
 if ($post == null) {
   die('Значение GET параметра id передано неверно.');
 }
-=======
-require_once 'database-connections.php';
-
-$database = createDBConnection();
-if (array_key_exists('id', $_GET)) {
-  $postId = (int) $_GET['id'];
-} else {
-  exit('Пиздуй отсюда');
-}
-if (gettype($postId) == "integer") {
-  $DatabaseIdSearch = $database->query("SELECT id FROM post WHERE id= $postId");
-  $DatabaseIds = mysqli_fetch_all($DatabaseIdSearch, MYSQLI_NUM);
-  if ($DatabaseIds) {
-    $postId = $_GET['id'];
-  } else {
-    exit('Иди нахуй');
-  }
-}
-$result = mysqli_query($database, "SELECT * FROM post WHERE id = $postId");
-$post = mysqli_fetch_assoc($result);
->>>>>>> 9eddfbd732b3616be3f0cccef27ee367cd5ba148
 closeDBConnection($database);
 ?>
 
