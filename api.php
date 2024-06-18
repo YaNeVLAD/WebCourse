@@ -19,7 +19,7 @@ if ($method === 'POST') {
     $database = createDBConnection();
 
     try {
-        preparePostParams($dataAsArray);        
+        preparePostParams($dataAsArray);
     } catch (Exception $e) {
         echo $e->getMessage();
         die();

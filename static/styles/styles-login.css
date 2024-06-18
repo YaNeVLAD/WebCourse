@@ -70,7 +70,6 @@ body {
     background-color: rgba(66, 70, 73, 0.4);
     background-blend-mode: darken;
     background-image: url('/static/login-images/main-image.png');
-
 }
 
 .content__description {
@@ -86,7 +85,7 @@ body {
 
 .login-form {
     display: inline-block;
-    height: 560px;
+    min-height: 560px;
     padding: 0 40px;
     border-radius: 3px 0px 0px 0px;
     background-color: rgb(255, 255, 255);
@@ -118,8 +117,26 @@ body {
     color: rgb(46, 46, 46);
 }
 
+.login-form__span {
+    display: block;
+    margin-bottom: 40px;
+    font: 400 16px/24px "Oxygen", sans-serif;
+    color: rgb(46, 46, 46);
+}
+
+.login-form__link {
+    font-weight: 400;
+    color: rgb(46, 46, 46);
+    text-decoration: none;
+}
+
+.login-form__link:hover {
+    text-decoration: underline;
+}
+
 .login-form__submit {
     height: 48px;
+    margin-bottom: 56px;
     padding: 12px 24px 12px 24px;
     border: 0;
     border-radius: 3px;
@@ -144,24 +161,42 @@ body {
 }
 
 .submitFail {
+    display: flex;
+    align-items: center;
     background: rgb(255, 235, 234);
     border-left: 2px solid rgb(232, 105, 97);
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
     max-width: 1180px;
-    margin: 0 auto 40px auto;
-    transition: all 1s ease;
+    margin: 0 auto 0 auto;
+    height: 0;
+    transition: height 0.3s; 
 }
 
 .submitFail__img {
-    margin: 10px 0 10px 12px;
+    width: 24px;
+    height: 0;
+    margin: 0 12px 0 14px;
+    transition: height 0.3s; 
 }
 
 .submitFail__span {
     display: inline-block;
     font: 400 14px / 20px "Oxygen", sans-serif;
     color: rgb(46, 46, 46);
-    margin: 11px 0 15px 10px;
-    vertical-align: bottom;
+    height: 0;
+    transition: height 0.3s; 
+}
+
+.submitFail.active {
+    margin-bottom: 40px;
+}
+
+.submitFail__span.active {
+    height: 20px;
+}
+
+.active {
+    height: 44px;
 }
 
 @media screen and (max-width: 768px) {

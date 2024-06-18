@@ -38,9 +38,11 @@ function registerUser(mysqli $database, ?array $data): ?int
         throw new Exception("Empty data");
     }
     validateData($data);
+
     $email = $data['email'];
     $user = findUserByEmail($database, $email);
     $requestPassword = md5(md5($data['password']) . SALT);
+    
     if (!$user) {
         $id = saveUser($database, $email, $requestPassword);
         return $id;

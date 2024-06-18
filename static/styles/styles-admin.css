@@ -35,6 +35,14 @@ body {
     color: rgba(232, 105, 97, 1);
 }
 
+.filled {
+    background-color: rgb(247, 247, 247);
+    border-bottom: 1px solid rgb(46, 46, 46);
+}
+
+.empty {
+    background: rgb(255, 255, 255);
+}
 
 .loadedFile__new,
 .loadedFile__remove {
@@ -84,12 +92,24 @@ body {
 
 .header__avatar {
     display: inline-block;
-    background-image: url("/static/admin-images/user-avatar.svg");
+    position: relative;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 20px;
     height: 32px;
     width: 32px;
+}
+
+.header__avatar-letter {
+    position: absolute;
+    font: 400 16px/24px "Oxygen", sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    width: 12px;
+    left: 10px;
+    top: 4px;
 }
 
 .header__logout {
@@ -240,7 +260,6 @@ body {
     width: 544px;
     border-width: 0 0 1px 0;
     border-color: rgb(234, 234, 234);
-    background-color: rgb(255, 255, 255);
     min-height: 32px;
     font: 400 16px/24px "Oxygen", sans-serif;
     padding: 4px 8px;

@@ -24,13 +24,13 @@
         <form id="form" class="login-form" enctype="multipart/form-data">
             <h1 class="login-form__title">Sign Up</h1>
             <div class="submitStatus" id="result">
-                <div class="submitFail hidden">
+                <div class="submitFail">
                     <img src="static/login-images/submit-fail.svg" class="submitFail__img">
-                    <span class="submitFail__span">Your email has been already taken</span>
+                    <span class="submitFail__span"></span>
                 </div>
-                <div class="submitFail hidden">
+                <div class="submitFail">
                     <img src="static/login-images/submit-fail.svg" class="submitFail__img">
-                    <span class="submitFail__span">A-Ah! Check all fields,</span>
+                    <span class="submitFail__span"></span>
                 </div>
             </div>
             <div class="login-form__inputs">
@@ -45,6 +45,7 @@
                     <icon class="login-form__show-pass hidden-pass" id="togglePassword"></icon>
                 </div>
             </div>
+            <span class="login-form__span">Already have an account? <a class="login-form__link" href="login">Log In</a></span>
             <button id="submit" class="login-form__submit no-click" type="submit">Sign Up</button>
         </form>
     </div>

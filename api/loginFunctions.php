@@ -38,11 +38,13 @@ function loginUser(mysqli $database, ?array $data): int
         throw new Exception("Empty data");
     }
     validateData($data);
+    
     $email = $data['email'];
     $user = findUserByEmail($database, $email);
     if (!$user) {
         throw new Exception("Wrong Email");
     }
+
     $requestPassword = md5(md5($data['password']) . SALT);
     if ($user['password'] === $requestPassword) {
         return $user['user_id'];

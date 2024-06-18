@@ -19,18 +19,18 @@
                 <img class="content__logo_escape" src="static/login-images/logo-escape.svg">
                 <img class="content__logo_author" src="static/login-images/logo-author.svg">
             </div>
-            <span class="content__description">Log in to start creating</span>
+            <span class="content__description">Log In to start creating</span>
         </div>
         <form id="form" class="login-form" enctype="multipart/form-data" action="api/login.php" method="post">
             <h1 class="login-form__title">Log In</h1>
             <div class="submitStatus" id="result">
-                <div class="submitFail hidden">
+                <div class="submitFail">
                     <img src="static/login-images/submit-fail.svg" class="submitFail__img">
-                    <span class="submitFail__span">Email or password is incorrect.</span>
+                    <span class="submitFail__span"></span>
                 </div>
-                <div class="submitFail hidden">
+                <div class="submitFail">
                     <img src="static/login-images/submit-fail.svg" class="submitFail__img">
-                    <span class="submitFail__span">A-Ah! Check all fields,</span>
+                    <span class="submitFail__span"></span>
                 </div>
             </div>
             <div class="login-form__inputs">
@@ -45,6 +45,7 @@
                     <icon class="login-form__show-pass hidden-pass" id="togglePassword"></icon>
                 </div>
             </div>
+            <span class="login-form__span">Don't have an account? <a class="login-form__link" href="register">Sign Up</a></span>
             <button id="submit" class="login-form__submit no-click" type="submit">Log In</button>
         </form>
     </div>

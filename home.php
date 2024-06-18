@@ -1,6 +1,16 @@
 <?php
 require_once 'databaseFunctions.php';
+require_once 'sessionFunctions.php';
+$database = createDBConnection();
+
+$featuredPosts = getPosts($database, FEATURED);
+$recentPosts = getPosts($database, RECENT);
+
+$isAuthorized = authBySession();
+
+closeDBConnection($database);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,19 +45,28 @@ require_once 'databaseFunctions.php';
           <li class="header__item">
             <a class="header__link" href="login">login</a>
           </li>
+          <?php if ($isAuthorized) { ?>
+            <li class="header__item">
+              <a class="header__link" href="admin">admin</a>
+            </li>
+          <?php }
+          ?>
         </ul>
         <div class="header__burger-menu">
-          <input id="header__burger-toggle" type="checkbox" />
+          <input class="header__burger-toggle" id="header__burger-toggle" type="checkbox" />
           <label class="header__burger-button" for="header__burger-toggle">
             <span></span>
           </label>
-            
           <ul class="header__burger-box">
-            <li><a class="menu__item" href="#">Home</a></li>
-            <li><a class="menu__item" href="#">Categories</a></li>
-            <li><a class="menu__item" href="#">About</a></li>
-            <li><a class="menu__item" href="#">Contact</a></li>
-            <li><a class="menu__item" href="login">Login</a></li>
+            <li><a class="header__burger__item" href="#">home</a></li>
+            <li><a class="header__burger__item" href="#">categories</a></li>
+            <li><a class="header__burger__item" href="#">about</a></li>
+            <li><a class="header__burger__item" href="#">contact</a></li>
+            <li><a class="header__burger__item" href="login">login</a></li>
+            <?php if ($isAuthorized) { ?>
+              <li><a class="header__burger__item" href="admin">admin</a></li>
+            <?php }
+            ?>
           </ul>
         </div>
       </nav>
@@ -87,12 +106,9 @@ require_once 'databaseFunctions.php';
       <h2 class="featured__title">Featured Posts</h2>
       <div class="featured__posts-container">
         <?php
-        $database = createDBConnection();
-        $request = mysqli_query($database, "SELECT * FROM post WHERE featured = 1");
-        while ($featured_post = mysqli_fetch_assoc($request)) {
+        foreach ($featuredPosts as $post) {
           include 'featured-post_sample.php';
         }
-        closeDBConnection($database);
         ?>
       </div>
     </div>
@@ -100,12 +116,9 @@ require_once 'databaseFunctions.php';
       <h2 class="most-recent__title">Most Recent</h2>
       <div class="most-recent__posts-container">
         <?php
-        $database = createDBConnection();
-        $request = mysqli_query($database, "SELECT * FROM post WHERE featured = 0");
-        while ($recent_post = mysqli_fetch_assoc($request)) {
+        foreach ($recentPosts as $post) {
           include 'post_sample.php';
         }
-        closeDBConnection($database);
         ?>
       </div>
   </main>
