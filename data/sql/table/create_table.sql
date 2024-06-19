@@ -1,13 +1,16 @@
-CREATE
-TABLE 
-	post_test (
-		id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-		title VARCHAR(255),
-		subtitle VARCHAR(255),
-		content TEXT NOT NULL,
-		author VARCHAR(255),
-		author_url VARCHAR(255),
-		publish_date VARCHAR(255),
-		image_url VARCHAR(255),
-		featured TINYINT(1) DEFAULT 0
-);
+CREATE TABLE `post` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`title` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`subtitle` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb4_ru_0900_ai_ci',
+	`content` TEXT NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`author_name` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`author_url` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`creation_date` INT(10) UNSIGNED NULL DEFAULT NULL,
+	`image_url` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`categorie` VARCHAR(255) NULL DEFAULT '' COLLATE 'utf8mb4_ru_0900_ai_ci',
+	`featured` TINYINT(1) NULL DEFAULT '0',
+	PRIMARY KEY (`id`) USING BTREE
+)
+COLLATE='utf8mb4_ru_0900_ai_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=220;
